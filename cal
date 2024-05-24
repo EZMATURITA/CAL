@@ -1,0 +1,71 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Kalkulačka_3
+{
+    internal class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("_______________");
+            Console.WriteLine("Enter first nuber");
+            if (!float.TryParse(Console.ReadLine(), out float a))
+            {
+                Console.WriteLine("Enter a NUMBER");
+                Main();
+            }
+            Console.WriteLine("Symbol (+, -, /, *)");
+            string symbol = Console.ReadLine();
+            if (symbol == "+" || symbol == "-" || symbol == "/" || symbol == "*")
+            {
+                
+            }
+            else
+            {
+                Console.WriteLine("Enter one of these symbols (+, -, /, *)");
+            }
+            Console.WriteLine("Enter second nuber");
+            if (!float.TryParse(Console.ReadLine(), out float b))
+            {
+                Console.WriteLine("Enter a NUMBER");
+                Main();
+            }
+            switch (symbol)
+            {
+                case "+":
+                    float res = a + b;
+                    Console.WriteLine(res);
+                    Main();
+                    break;
+                case "-":
+                    res = a - b;
+                    Console.WriteLine(res);
+                    Main();
+                    break;
+                case "*":
+                    res = a * b;
+                    Console.WriteLine(res);
+                    Main();
+                    break;
+                case "/":
+                    if(b == 0)
+                    {
+                        Console.WriteLine("Cant devide by zero");
+                        Main();
+                    }
+                    else
+                    {
+                        res = a / b;
+                        Console.WriteLine(res);
+                        Main();
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+}
