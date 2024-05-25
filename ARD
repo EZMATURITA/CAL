@@ -11,16 +11,16 @@ void setup()
 }
 void loop(){
 digitalWrite(RED, HIGH);
-delay(DALEAY);
+delay(DELAY);
 digitalWrite(YELLOW, HIGH);
-delay(DALEAY);
+delay(DELAY);
 digitalWrite(RED, LOW);
 digitalWrite(YELLOW, LOW);
-delay(DALEAY);
+delay(DELAY);
 digitalWrite(GREEN, HIGH);
-delay(DALEAY * 2);
+delay(DELAY * 2);
 digitalWrite(GREEN, LOW);
 digitalWrite(YELLOW, HIGH);
-delay(DALEAY);;
+delay(DELAY);
 digitalWrite(YELLOW, LOW);
 }
