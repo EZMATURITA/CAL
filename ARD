@@ -9,7 +9,8 @@ void setup()
   pinMode(RED, OUTPUT);
   pinMode(DELAY, INPUT);
 }
-void loop(){
+void loop()
+{
 digitalWrite(RED, HIGH);
 delay(DELAY);
 digitalWrite(YELLOW, HIGH);
