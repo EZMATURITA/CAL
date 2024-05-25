@@ -1,0 +1,53 @@
+using System;
+using System.IO;
+using System.Text;
+using System.Collections;
+namespace Files
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("File name");
+            string Filename = Console.ReadLine();
+            if (Filename.Contains(@"\"))
+            {
+                Console.WriteLine(@"Cant have \ in filename");
+                Main();
+            }
+            string path = @"C:\Users\jakub\Desktop\fliestream\" + Filename + ".txt";
+            Console.WriteLine("1 for writng into a file");
+            Console.WriteLine("2 for reading a file");
+            Console.WriteLine("3 for deleting a file");
+            string opr = Console.ReadLine();
+            if (opr == "1" || opr == "2" || opr == "3")
+            {
+                switch (opr)
+                {
+                    case "1":
+
+                            Console.WriteLine("Enter text");
+                            String write = Console.ReadLine() + Environment.NewLine;
+                            File.AppendAllText(path, write + "\r");
+                        break;
+                    case "2":
+                        string readtext = File.ReadAllText(path);
+                        Console.WriteLine(readtext);
+                        break;
+                    case "3":
+                        File.Delete(path);
+                        Console.WriteLine("File has been deleted");
+                        break;
+                    default:
+                        Console.WriteLine("File does not exist");
+                        break;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Enter a corect number");
+            }
+            Main();
+        }
+    }
+}
