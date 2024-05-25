@@ -1,0 +1,33 @@
+DROP TABLE Customers;
+DROP TABLE Orders;
+DROP TABLE Shippings;
+CREATE TABLE X(
+  A varchar(255),
+  B varchar(255),
+  C int);
+
+CREATE TABLE Y(
+  D varchar(255));
+  INSERT INTO X
+VALUES ("Aadaw", "dsawds", 500);
+INSERT INTO X
+VALUES ("Psdaslsky", "Aan Dose", 300);
+INSERT INTO X
+VALUES ("ssdaws", "sadawse", 250);
+INSERT INTO X
+VALUES ("Tdsawra", "Fdsawdsae", 400);
+INSERT INTO X
+VALUES ("sawdsax", "Sosawdss", 120);
+
+INSERT INTO Y
+VALUES ("dsawds");
+INSERT INTO Y
+VALUES ("Aan Dose");
+INSERT INTO Y
+VALUES ("Aan Dose");
+INSERT INTO Y
+VALUES ("dsawdsacsafa");
+SELECT A, B
+FROM X
+INNER JOIN Y
+ON X.B = Y.D;
