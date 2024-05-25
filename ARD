@@ -1,0 +1,24 @@
+int GREEN = 2;
+int YELLOW = 3;
+int RED = 4;
+int DELAY = analogRead (A0);
+void setup()
+{
+  pinMode(GREEN, OUTPUT);
+  pinMode(YELLOW, OUTPUT);
+  pinMode(RED, OUTPUT);
+  pinMode(DELAY, INPUT);
+}
+void loop(){
+digitalWrite(RED, HIGH);
+ DELAY * 2;
+digitalWrite(YELLOW, HIGH);
+digitalWrite(RED, LOW);
+digitalWrite(YELLOW, LOW);
+digitalWrite(GREEN, HIGH);
+DELAY * 2;
+digitalWrite(GREEN, LOW);
+digitalWrite(YELLOW, HIGH);
+DELAY;
+digitalWrite(YELLOW, LOW);
+}
