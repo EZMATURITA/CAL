@@ -45,7 +45,7 @@ namespace Files
             }
             else
             {
-                Console.WriteLine("Enter a corect number");
+                Console.WriteLine("Enter a correct number");
             }
             Main();
         }
